@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DAMN</title>
+    <!-- Boostrap CSS File -->
+    <link rel="shortcut icon" href="asset/img/logos/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Locomotive Scroll File -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css"
+    />
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="asset/css/test.css" />
+    <link rel="stylesheet" href="asset/css/musicPlayer.css" />
+    <link rel="stylesheet" href="asset/css/style.css">
+    <!-- Fonts -->
+		<link href="https://fonts.cdnfonts.com/css/exo-3" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/neonblitz" rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/91d7b12cfe1a955fa0d9e98e5f7d35af?family=PumpW01-Light" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+    <!-- Header -->
+		<header id="header">
+			<nav class="navbar navbar-expand-md fixed-top navbar-dark" aria-label="Main navigation">
+				<div class="container-fluid">
+					<!-- LOGO -->
+					<a class="navbar-brand" href="index.html">
+						<img src="asset/img/logos/logo-medium.png" alt="Logo DAWNFM">
+					</a>
+
+					<!-- NUMBER ANIMATED -->
+					<div class="numbers">
+						<span class="numbers__window">
+							<span class="numbers__window__digit numbers__window__digit--1" data-fake="8642519073">1</span>
+						</span>
+						<span class="numbers__window">
+							<span class="numbers__window__digit numbers__window__digit--2" data-fake="0207186390">0</span>
+						</span>
+						<span class="numbers__window">
+							<span class="numbers__window__digit numbers__window__digit--3" data-fake="8395216407">3</span>
+						</span>
+						<span class="numbers__window">
+							<span class="ponctuation">.</span>
+						</span>
+						<span class="numbers__window">
+							<span class="numbers__window__digit numbers__window__digit--4" data-fake="5462931437">5</span>
+						</span>
+					</div>
+
+					<!-- TOGGLE BUTTON -->
+					<button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<!-- NAVBARCOLLAPSE -->
+					<div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+						<ul class="navbar-nav mb-lg-0">
+							<li>
+                <span class="close-icon">&times;</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link home" aria-current="page" href="index.html" title="Home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link about" href="index.html#about" title="About">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link album" href="index.html#album" title="Album">Album</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link news" href="index.html#news" title="News">News</a>
+              </li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- End Navbar -->
+		</header>
+		<!-- End Header -->
+
+    <main data-scroll-container class=" background-gradient containers">
+      <!-- About Section -->
+      <section id="about" class="hero">
+        <div data-scroll data-scroll-speed="3" class="copy">
+          <blockquote>
+            “You're tuned to Dawn FM
+            <br>
+            The middle of nowhere on your dial
+            <br>
+            So sit back and unpack
+            <br>
+            You may be here awhile”
+            <cite>
+              — Jim Carrey
+            </cite>
+          </blockquote>
+        </div>
+        <div class="image-wrapper">
+          <img src="asset/img/theweeknd.jpeg" alt="The Weeknd">
+        </div>
+      </section>
+      <!-- End About Section -->
+      
+      <!-- Effect Text -->
+      <div class="effect-text2" data-scroll data-scroll-speed="2">
+        <p 
+          data-scroll 
+          data-scroll-direction="horizontal" 
+          data-scroll-speed="-2"
+        >
+          It’s time to walk into
+        </p>
+        <p 
+          data-scroll 
+          data-scroll-direction="horizontal" 
+          data-scroll-speed="2"
+        >
+          the light and accept your fate
+        </p>
+        
+        <h2 class="text-center mb-4"><cite>TRACKLIST</cite></h2>
+      </div>
+      <!-- End Effect Text2 -->
+
+      <!-- Album Section -->
+      <section id="album" class="container album">
+        <!-- Player -->
+				<div class="player" aria-label="Music player">
+          <div class="player__header">
+            <div class="player__img slider">
+              <!-- Btns Play/Pause -->
+              <button class="player__button play">
+                <img src="asset/img/tracklist/play.svg" alt="play-icon">
+                <img src="asset/img/tracklist/pause.svg" alt="pause-icon">
+              </button>
+              <!-- End Btns Play/Pause -->
+              <!-- Cont Song -->
+              <div class="slider__content"></div>
+              <!-- End Content SOng -->
+            </div>
+              <!-- Player Controls -->
+              <div class="player__controls">
+                <!-- Btn Back -->
+                <button class="player__button back">
+                  <figure>
+                    <img src="asset/img/tracklist/skip-backward.svg" alt="Icon skip backward">
+                  </figure>
+                </button>
+                <!-- CURRENT SONG -->
+                <p class="player__context slider__context">
+                  <strong class="slider__name"></strong>
+                  <span class="player__title slider__title"></span>
+                </p>
+                <!-- Btn Next -->
+                <button class="player__button next">
+                    <figure>
+                      <img src="asset/img/tracklist/skip-forward.svg" alt="Icon skip forward">
+                    </figure>
+                </button>
+                <!-- Progress Bar -->
+                <div class="progres">
+                  <div class="progres__filled"></div>
+                </div>
+                <!-- End Progress Bar -->
+              </div>
+              <!-- End Player Controls -->
+          </div>
+          <!-- PLAYLIST -->
+          <div class="player__scrollbar">
+            <div>
+              <ul class="player__playlist list row">
+                <li class="player__song col-12">
+                  <img class="player__img img" src="asset/img/album.jpg" alt="Cover album">
+                  <p class="player__context">
+                    <b class="player__song-name">GASOLINE</b>
+                    <span class="player__song-time"></span>
+                  </p>
+                  <audio class="audio" src="asset/songs/gasoline.mp3"></audio>
+                </li>
+                  <li class="player__song col-12">
+                      <img class="player__img img" src="asset/img/album.jpg" alt="Cover album">
+                      <p class="player__context">
+                          <b class="player__song-name">HOW DO I MAKE YOU LOVE ME?</b>
+                          <span class="player__song-time"></span>
+                      </p>
+                      <audio class="audio" src="asset/songs/how-do-i-make-you-love-me.mp3"></audio>
+                  </li>
+                  <li class="player__song col-12">
+                      <img class="player__img img" src="asset/img/album.jpg" alt="Cover album">
+                      <p class="player__context">
+                          <b class="player__song-name">TAKE MY BREATH</b>
+                          <span class="player__song-time"></span>
+                      </p>
+                      <audio class="audio" src="asset/songs/take-my-breath.mp3"></audio>
+                  </li>
+                  <li class="player__song col-12">
+                      <img class="player__img img" src="asset/img/album.jpg" alt="Cover album">
+                      <p class="player__context">
+                          <b class="player__song-name">SACRIFICE</b>
+                          <span class="player__song-time"></span>
+                      </p>
+                      <audio class="audio" src="asset/songs/sacrifice.mp3"></audio>
+                  </li>
+                  <li class="player__song col-12">
+                      <img class="player__img img" src="asset/img/album.jpg" alt="Cover album">
+                      <p class="player__context ">
+                          <b class="player__song-name">A TALE BY QUINCY</b>
+                          <span class="player__song-time"></span>
+                      </p>
+                      <audio class="audio" src="asset/songs/a-tale-by-quincy.mp3"></audio>
+                  </li>
+                  <li class="player__song col-12">
+                      <img class="player__img img" src="asset/img/album.jpg" alt="Cover album">
+                      <p class="player__context">
+                          <b class="player__song-name">HERE WE GO ... AGAIN</b>
+                          <span class="player__song-time"></span>
+                      </p>
+                      <audio class="audio" src="asset/songs/here-we-go-again.mp3"></audio>
+                  </li>
+                  <li class="player__song col-12">
+                      <img class="player__img img" src="asset/img/album.jpg" alt="Cover album">
+                      <p class="player__context">
+                          <b class="player__song-name">OUT OF TIME</b>
+                          <span class="player__song-time"></span>
+                      </p>
+                      <audio class="audio" src="asset/songs/out-of-time.mp3"></audio>
+                  </li>
+                  <li class="player__song col-12">
+                      <img class="player__img img" src="asset/img/album.jpg" alt="Cover album">
+                      <p class="player__context">
+                          <b class="player__song-name">BEST FRIENDS</b>
+                          <span class="player__song-time"></span>
+                      </p>
+                      <audio class="audio" src="asset/songs/best-friends.mp3"></audio>
+                  </li>
+                  <li class="player__song col-12">
+                      <img class="player__img img" src="asset/img/album.jpg" alt="Cover album">
+                      <p class="player__context">
+                          <b class="player__song-name">IS THERE SOMEONE ELSE?</b>
+                          <span class="player__song-time"></span>
+                      </p>
+                      <audio class="audio" src="asset/songs/is-there-someone-else.mp3"></audio>
+                  </li>
+                  <li class="player__song col-12">
+                      <img class="player__img img" src="asset/img/album.jpg" alt="Cover album">
+                      <p class="player__context">
+                          <b class="player__song-name">STARRY EYES</b>
+                          <span class="player__song-time"></span>
+                      </p>
+                      <audio class="audio" src="asset/songs/starry-eyes.mp3"></audio>
+                  </li>
+                  <li class="player__song col-12">
+                      <img class="player__img img" src="asset/img/album.jpg" alt="Cover album">
+                      <p class="player__context">
+                          <b class="player__song-name">EVERY ANGEL IS TERRYFING</b>
+                          <span class="player__song-time"></span>
+                      </p>
+                      <audio class="audio" src="asset/songs/every-angel-is-terryfing.mp3"></audio>
+                  </li>
+                  <li class="player__song col-12">
+                      <img class="player__img img" src="asset/img/album.jpg" alt="Cover album">
+                      <p class="player__context">
+                          <b class="player__song-name">DON'T BREAK MY HEART</b>
+                          <span class="player__song-time"></span>
+                      </p>
+                      <audio class="audio" src="asset/songs/don-t-break-my-heart.mp3"></audio>
+                  </li>
+                  <li class="player__song col-12">
+                      <img class="player__img img" src="asset/img/album.jpg" alt="Cover album">
+                      <p class="player__context">
+                          <b class="player__song-name">I HEARD YOU'RE MARRIED</b>
+                          <span class="player__song-time"></span>
+                      </p>
+                      <audio class="audio" src="asset/songs/i-heard-you-re-married.mp3"></audio>
+                  </li>
+                  <li class="player__song col-12">
+                      <img class="player__img img" src="asset/img/album.jpg" alt="Cover album">
+                      <p class="player__context">
+                          <b class="player__song-name">LESS THAN ZERO</b>
+                          <span class="player__song-time"></span>
+                      </p>
+                      <audio class="audio" src="asset/songs/less-than-zero.mp3"></audio>
+                  </li>
+                  <li class="player__song col-12">
+                      <img class="player__img img" src="asset/img/album.jpg" alt="Cover album">
+                      <p class="player__context">
+                          <b class="player__song-name">PHANTOM REGRET</b>
+                          <span class="player__song-time"></span>
+                      </p>
+                      <audio class="audio" src="asset/songs/phantom-regret-by-jim.mp3"></audio>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End Player -->
+      </section>
+      <!-- End Album Section -->
+
+      <!-- Effect Text3 -->
+      <div class="effect-text3">
+        <div id="pinSection" class="pinned-quote">
+          <blockquote data-scroll data-scroll-sticky data-scroll-target="#pinSection">
+            “Are you listening real close ?
+            <br>
+            Heaven's not that, it's this
+            <br>
+            It's the depth of this moment
+            <br>
+            You don't reach for bliss”
+            <cite>
+              — Jim Carrey
+            </cite>
+          </blockquote>
+        </div>
+        
+        <div class="images-container">
+          <img src="asset/img/slides/1.webp" alt="Flower">
+          <img src="asset/img/slides/2.webp" alt="Eclipse">
+          <img src="asset/img/slides/3.webp" alt="The Weeknd out of his car">
+          <img src="asset/img/slides/4.webp" alt="The Weeknd on the floor">
+          <img src="asset/img/slides/5.webp" alt="Old version of The Weeknd">
+        </div>
+      </div>
+      <!-- End Effect Text3 -->
+      
+      <!-- News Section-->
+			<section id="news" class="container mt-5 news">
+        <h2 class="text-center"><cite>NEWS</cite></h2>
+        <!-- NewsCarousel -->
+				<div id="newsCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="News carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<a href="asset/pages/news1.html" class="card-link">
+								<div class="card text-bg-dark">
+									<img src="asset/img/news/new__brit.webp" class="card-img" alt="BRIT AWARDS 2021">
+								</div>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<a href="asset/pages/news2.html" class="card-link">
+								<div class="card text-bg-dark">
+									<img src="asset/img/news/new__take-my-breath.webp" class="card-img" alt="Cover clip Take My Breath">
+								</div>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<a href="asset/pages/news3.html" class="card-link">
+								<div class="card text-bg-dark">
+									<img src="asset/img/news/new__tour.webp" class="card-img" alt="The Weeknd AFTER HOURS TOUR">
+								</div>
+							</a>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+				</div>
+			</section>
+      <!-- End News Section -->
+
+      <!-- FOOTER -->
+			<footer>
+				<ul class="nav justify-content-center">
+					<li class="nav-item">
+						<a href="https://www.youtube.com/watch?v=w8eFZoOcYKc&list=OLAK5uy_kLDIwUpujhh1d3K95xVntTJcuNlk_4cew" class="nav-link px-2 text-white">
+						<img class="links" src="asset/img/footer/yt.webp" alt="Youtube logo"></a>
+					</li>
+					<li class="nav-item">
+						<a href="https://open.spotify.com/album/2nLOHgzXzwFEpl62zAgCEC" class="nav-link px-2 text-white">
+						<img class="links" src="asset/img/footer/spotify.webp" alt="Spotify logo"></a>
+					</li>
+					<li class="nav-item">
+						<a href="https://soundcloud.com/theweeknd/sets/dawn-fm-3" class="nav-link px-2 text-white">
+						<img class="links" src="asset/img/footer/soundcloud.webp" alt="Soundcloud logo"></a>
+					</li>
+					<li class="nav-item">
+						<a href="https://www.instagram.com/dawnfm.5/" class="nav-link px-2 text-white">
+						<img class="links" src="asset/img/footer/insta.webp" alt="Instagram logo"></a>
+					</li>
+					<li class="nav-item">
+						<a href="https://twitter.com/theweeknd" class="nav-link px-2 text-white">
+						<img class="links" src="asset/img/footer/twitter.webp" alt="Twitter logo"></a>
+					</li>
+					<li class="nav-item">
+						<a href="https://www.facebook.com/theweeknd" class="nav-link px-2 text-white">
+						<img class="links" src="asset/img/footer/fb.webp" alt="Facebook logo"></a>
+					</li>
+					<li class="nav-item">
+						<a href="https://music.apple.com/fr/album/dawn-fm/1603171516" class="nav-link px-2 text-white">
+						<img class="links" src="asset/img/footer/apple.webp" alt="Apple logo"></a>
+					</li>
+				</ul>
+				<ul class="nav justify-content-center rights">
+					<li class="nav-item"><a href="#" class="nav-link px-2 text-white">COPYRIGHT REPUBLICS RECORDS</a></li>
+					<li class="nav-item"><a href="asset/pages/legal.html" class="nav-link px-2 text-white">LEGAL NOTICES</a></li>
+				</ul>
+			</footer>
+			<!-- End Footer -->
+    </main>
+
+    <!-- Boostrap JS FIle -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- GSAP JS File -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.8.0/dist/ScrollTrigger.min.js"></script>
+    <!-- Locomotive Scroll JS File -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <!-- JS File -->
+    <script src="asset/js/index.js"></script>
+    <script src="asset/js/musicPlayer.js"></script>
+  </body>
+</html>

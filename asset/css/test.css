@@ -1,0 +1,102 @@
+.containers {
+  background: #dfdfdf;
+
+  .hero {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 100vh;
+    
+    .copy {
+      display: grid;
+      align-content: center;
+      padding: 0 1rem;
+      height: 100%;
+      
+      blockquote {
+        font-size: 6vmin;
+        font-weight: 300;
+
+        span {
+            font-style: italic;
+            font-weight: 400;
+        }
+        
+        cite {
+          font-weight: 300;
+          font-style: italic;
+          font-size: 4.5vmin;
+          display: block;
+          padding: 8px 0;
+        }
+      }
+    }
+    
+    .image-wrapper {
+      height: 100vh;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .effect-text2 {
+    margin-top: 20vh;
+    text-align: center;
+
+    p {
+      font-size: 5vw;
+      color: #FBF8C9;
+    }
+
+    cite {
+      /* //   display: block; */
+      font-size: 3vw;
+    }
+  }
+  
+  .album {
+    height: 80vh;
+  }
+  
+  .effect-text3 {
+    height: calc(200vh);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 40% 60%;
+
+    blockquote {
+      font-size: 5vmin;
+      padding: 200px 16px 0 16px;
+
+      cite {
+          display: block;
+      }
+    }
+    
+    .images-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 8px;
+      gap: 8px;
+      margin-top: 16px;
+      
+      img {
+        width: 100%;
+        max-height: 75vh;
+        height: 100%;
+        align-self: stretch;
+        object-fit: cover;
+      }
+    }
+  }
+  
+  .news:not(.carousel) {
+    height: 50vh;
+    position: relative;
+    display: grid;
+    align-items: center;
+  } 
+}
